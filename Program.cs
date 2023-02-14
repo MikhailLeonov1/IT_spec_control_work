@@ -41,3 +41,20 @@ string[] SortArray(string[] array)
     }
     return endArray;
 }
+
+void PrintArray(string[] array)
+{
+    if (array.Length == 0) Console.WriteLine("Нет подходящих значений в исходном массиве");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"  [{array[i]}]");
+    }
+}
+
+
+FillArray(startArray);
+string[] endArray = SortArray(startArray);
+Console.WriteLine("\n Первоначальный массив:");
+PrintArray(startArray);
+Console.WriteLine("\n Итоговый массив <= 3 символа");
+PrintArray(endArray);
